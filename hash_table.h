@@ -1,15 +1,5 @@
-/*
- * hash_table.h
- *
- *  Created on: May 25, 2016
- *      Author: david_000
- */
-
 #ifndef HASH_TABLE_H_
 #define HASH_TABLE_H_
-
-#include "list.h"
-#include "troll.h"
 
 const int SIZE = 24593;
 
@@ -36,15 +26,6 @@ public:
 	void remove(Troll* troll) {
 		table[(troll->_TrollID)%SIZE].remove(troll);
 	}
-
-//	~HashTable() {
-//
-//		for(int i = 0 ; i < SIZE ; i++) {
-//			while(table[i]._head) {
-//				table[i].remove(table[i]._head->_data);
-//			}
-//		}
-//	}
 
 };
 
